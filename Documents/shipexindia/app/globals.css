@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "manrope-bold";
+  src: url(../Assets/Fonts/manrope-bold.otf);
+}
+@font-face {
+  font-family: "manrope-extra";
+  src: url(../Assets/Fonts/manrope-extrabold.otf);
+}
+@font-face {
+  font-family: "gort-bold";
+  src: url(../Assets/Fonts/Fontspring-DEMO-rocgrotesk-bold.otf);
+}
+@font-face {
+  font-family: "gort-mid";
+  src: url(../Assets/Fonts/Fontspring-DEMO-rocgroteskcond-medium.otf);
+}
+@font-face {
+  font-family: "gort";
+  src: url(../Assets/Fonts/Fontspring-DEMO-rocgroteskcond-regular.otf);
+}
+@font-face {
+  font-family: "manrope-mid";
+  src: url(../Assets/Fonts/manrope-medium.otf);
+}
+@font-face {
+  font-family: "manrope";
+  src: url(../Assets/Fonts/manrope-regular.otf);
+}
+@font-face {
+  font-family: "manrope-light";
+  src: url(../Assets/Fonts/manrope-light.otf);
+}
+
+:root {
+
+  --text-gradient: -webkit-linear-gradient(
+    70deg,
+    #00ffa2 0%,
+    #00ffa2 50%,
+    #00ffa2 60%
+  );
+
+  --text-gradient-secondary: -webkit-linear-gradient(
+    70deg,
+    #ff7722 0%,
+    #b758ff 60%,
+    #7a7eff 80%
+  );
+
+  --white-bg: #eeeeee;
+
+  --heading-large: 5rem;
+
+  --heading-big: 4rem;
+
+  --heading: 2.5rem;
+
+  --heading-small: 2rem;
+
+  --norm : 1rem;
+
+  --para: 0.9rem;
+
+  --para-mini: 0.8rem;
+
+  --text-para: #ddd;
+
+  --para-color: #ffffff99;
+
+  --white: #fff;
+
+  --text-color: #111;
+
+  --text-grey: #555;
+
+  --primary-color: #00c27c;
+
+  --primary-color-bg: #00ffa2;
+
+  --secondary-color: #5065f9;
+
+  --secondary-color-shadow: #5065f950;
+
+  --secondary-color-bg: #5980ff;
+
+  --extra: "manrope-extra";
+
+  --bold: "manrope-bold";
+
+  --mid-font: "manrope-mid";
+
+  --font: "manrope";
+
+  --light-font: "manrope-light";
+
+  --heading-font-gort: "gort-bold";
+
+  --normal-font-gort: "gort-mid";
+
+  --gort: "gort";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+
+    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --secondary-glow: linear-gradient(
+      to bottom right,
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0),
+      rgba(1, 65, 255, 0.3)
+    );
+
+    --tile-start-rgb: 2, 13, 46;
+    --tile-end-rgb: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --callout-rgb: 20, 20, 20;
+    --callout-border-rgb: 108, 108, 108;
+    --card-rgb: 100, 100, 100;
+    --card-border-rgb: 200, 200, 200;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--text-grey);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    width: 5px;
+  }
+}
+
+.firstSectionimg {
+  animation: floating 5s infinite alternate-reverse ease-in-out;
+  -webkit-animation: floating 5s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(15px);
+  }
+  66% {
+    transform: translateY(-15px);
+  }
+}
